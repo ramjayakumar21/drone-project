@@ -1,0 +1,46 @@
+.main-body--header {
+  background-color: rgb(66, 66, 66);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 1%;
+
+}
+
+.title {
+  margin-right: auto;
+}
+
+.menu {
+  height: 8vh;
+}
+
+.main-body--map {
+  margin: 4% 2% 0% 0%;
+  display: flex;
+}
+
+.main-body--info {
+  border: black solid 1px;
+  font-size: large;
+  height: 50%;
+}
+
+
+.main-body--map-element {
+  width: 80%;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+
+  .main-body--map {
+   flex-direction: column;
+  }
+
+  
+}
+
+
