@@ -1,5 +1,4 @@
 
-import menu from './menu.png'
 import './App.css';
 import React, { useState } from 'react';
 
@@ -7,12 +6,18 @@ function App() {
 
   let [source, changeSource] = useState("desktop_map.jpeg")
 
+  let [source2, changeSource2] = useState("menu-text.png")
+
   function resizeListener() {
     changeSource(window.innerWidth < 900 ? "mobile_map.png" : 'desktop_map.jpeg');
-    console.log(window.innerWidth)
+  }
+
+  function resizeListener2() {
+    changeSource2(window.innerWidth < 900 ? "menu.png" : 'menu-text.png');
   }
   
   window.addEventListener("resize", resizeListener);
+  window.addEventListener("resize", resizeListener2);
 
 
   return (
@@ -21,7 +26,7 @@ function App() {
           <h1 className='title'>
             DRUBER
           </h1>
-          <img className="menu" src={menu} alt="menu"></img>
+          <img className="menu" src={source2} alt="menu"></img>
         </div>
         <div className='main-body--map'>
         <img className="main-body--map-element" src={source} alt='.map'></img>
